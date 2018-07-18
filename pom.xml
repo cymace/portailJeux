@@ -1,0 +1,16 @@
+<project>
+<artifactId>simple-parent</artifactId>
+<packaging>pom</packaging>
+<version>1.0</version>
+<name>Projet parent</name>
+<modules>
+<module>Drissi</module>
+<module>hrazafim</module>
+<module>karima</module>
+<module>salim</module>
+<module>stephane</module>
+<module>Taoufik</module>
+<module>vachetoureau</module>
+<module>yohann</module>
+</modules>
+</project>
