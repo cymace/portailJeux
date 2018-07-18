@@ -3,7 +3,7 @@
 <packaging>pom</packaging>
 <version>1.0</version>
 <name>Projet parent</name>
-<modelVersion>1.0.0</modelVersion>
+<modelVersion>4.0.0</modelVersion>
 <groupId>fr.formation</groupId>
 <modules>
 <module>Drissi</module>
