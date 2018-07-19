@@ -6,8 +6,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.m2i.poec.service.EnigmeManager;
+
+
 
 /**
  * Servlet implementation class EnigmleServlet
@@ -15,7 +18,7 @@ import org.m2i.poec.service.EnigmeManager;
 @WebServlet("/formulaire")
 public class EnigmleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+	
     
     public EnigmleServlet() {
         super();
@@ -25,15 +28,19 @@ public class EnigmleServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession	session = request.getSession();
+		session.setAttribute("enigme", EnigmeManager.mapEnigme.get("enigme1"));
 		request.getRequestDispatcher("jsp/formulaire.jsp").forward(request, response);
-		request.setAttribute("enigme", EnigmeManager.mapEnigme.get("enigme1"));
+		
+		
 		
 		
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String repose= request.getParameter("treponse");
+		
 		doGet(request, response);
 	}
 
