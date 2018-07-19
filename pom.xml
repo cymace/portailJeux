@@ -14,5 +14,6 @@
 		<module>Taoufik</module>
 <!-- 		<module>vachetoureau</module> -->
 		<module>yohann</module>
+		<module>Test_Junit</module>
 	</modules>
 </project>
