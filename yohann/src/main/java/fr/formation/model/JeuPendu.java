@@ -3,13 +3,14 @@ package fr.formation.model;
 import java.util.Arrays;
 
 public class JeuPendu {
-	
+
+	private static JeuPendu uniqueInstance;
 	private int nbErreur;
 	private String mot;
 	private int cache[];
 	
 	
-	public JeuPendu(String mot) {
+	private JeuPendu(String mot) {
 		
 		this.mot = mot;
 		cache = new int[mot.length()];
@@ -20,6 +21,15 @@ public class JeuPendu {
 	}
 
 
+	 public static JeuPendu getInstance(String mot) {
+	        if (null == uniqueInstance) { // Premier appel
+	        	uniqueInstance = new JeuPendu(mot);
+	        }
+	        return uniqueInstance;
+	    }
+	
+	
+	
 	public int getNbErreur() {
 		return nbErreur;
 	}
@@ -49,6 +59,9 @@ public class JeuPendu {
 		this.cache = cache;
 	}
 
+	public void modifCacheById(int i, int valeur) {
+		cache[i]=valeur;
+	}
 
 	@Override
 	public String toString() {
