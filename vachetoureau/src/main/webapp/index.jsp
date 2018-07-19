@@ -20,7 +20,7 @@ img {
 	<p>Si un chiffre existe et n'est pas dans sa place ==> V</p>
 	<form method="post">
 		Proposez un nombre:<input placeholder="Nombre de 4 chiffres..."
-			type="text" name="proposition" /> <input name="envoyer"
+			type="text" name="proposition" pattern="[0-9]{4}"/> <input name="envoyer"
 			type="submit" value="Envoyer"> <input name="recommencer"
 			type="submit" value="Initialiser">
 		<table>
